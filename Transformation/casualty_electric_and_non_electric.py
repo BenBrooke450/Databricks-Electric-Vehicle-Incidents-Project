@@ -7,11 +7,11 @@
 
 # COMMAND ----------
 
-from pyspark.sql.functions import col, lit, contains, when, count, row_number, concat, upper, rank
+dbutils.fs.ls("/mnt/cityoflondoncrime/silver/")
 
 # COMMAND ----------
 
-dbutils.fs.ls("/mnt/cityoflondoncrime/silver/")
+from pyspark.sql.functions import col, lit, contains, when, count, row_number, concat, upper, rank
 
 # COMMAND ----------
 
@@ -42,19 +42,32 @@ casualty_statistics_2023_df \
 
 # COMMAND ----------
 
-#brands_of_electric_cars = \
-            #set(n[0] for n in electric_cars_df.select('make_and_model').collect())
+brands_of_electric_cars = \
+            set(n[0] for n in electric_cars_df.select('make_and_model').collect())
 
 # COMMAND ----------
 
-#casualty_statistics_2023_df.filter(col("generic_make_model") in brands_of_electric_cars)
+casualty_statistics_2023_df = casualty_statistics_2023_df \
+            .withColumn("electric_vehicle_type", when(col("generic_make_model").isin(brands_of_electric_cars), lit("Y")).otherwise("N"))
 
 # COMMAND ----------
 
-outer_df = casualty_statistics_2023_df \
-            .join(electric_cars_df,
-                  casualty_statistics_2023_df.generic_make_model == electric_cars_df.make_and_model,"inner")
+casualty_electric_cars_statistics_2023 = casualty_statistics_2023_df \
+                            .filter(col("electric_vehicle_type") == "Y")
 
 # COMMAND ----------
 
-outer_df.display()
+casualty_non_electric_cars_statistics_2023 = casualty_statistics_2023_df \
+                            .filter(col("electric_vehicle_type") == "N")
+
+# COMMAND ----------
+
+casualty_electric_cars_statistics_2023
+
+# COMMAND ----------
+
+casualty_electric_cars_statistics_2023.display()
+
+# COMMAND ----------
+
+

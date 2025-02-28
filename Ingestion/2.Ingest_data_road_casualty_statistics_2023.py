@@ -16,7 +16,8 @@ df = spark.read \
 schema_car = StructType(fields=[StructField('sex_of_driver', StringType(), True),
                 StructField("age_of_driver", IntegerType(), True),
                 StructField("age_of_vehicle", IntegerType(), True),
-                StructField("generic_make_model", StringType(), True)])
+                StructField("generic_make_model", StringType(), True),
+                StructField("accident_index", StringType(), True)])
 
 # COMMAND ----------
 
@@ -34,4 +35,5 @@ df = df.withColumn("ingestion_date", current_timestamp())
 
 df.write.format("delta") \
             .mode("overwrite") \
+            .option("mergeSchema", "true") \
             .save('/mnt/cityoflondoncrime/silver/processed_road_casualty_statistics_2023_data')
