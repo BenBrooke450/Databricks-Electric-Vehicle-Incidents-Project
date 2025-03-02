@@ -1,5 +1,11 @@
 
-
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="40" alt="numpy logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="40" alt="azure logo"  />
+</div>
 ## Project Description
 
 This project leverages Databricks and Azure to build a data processing system for analyzing electric car sales and accidents in the UK. The system employs a medallion architecture pipeline to efficiently process and analyze data, providing valuable insights into the trends and patterns of electric vehicle (EV) adoption and safety.
@@ -48,3 +54,5 @@ https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-accide
 https://www.gov.uk/government/statistical-data-sets/vehicle-licensing-statistics-data-files
 
 https://www.kaggle.com/datasets/yashdogra/ev-bhebic-c
+
+
