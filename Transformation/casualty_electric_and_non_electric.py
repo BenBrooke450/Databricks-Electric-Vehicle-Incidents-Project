@@ -62,12 +62,21 @@ casualty_non_electric_cars_statistics_2023 = casualty_statistics_2023_df \
 
 # COMMAND ----------
 
-casualty_electric_cars_statistics_2023
+casualty_statistics_2023_df.write.format("delta") \
+            .mode("overwrite") \
+            .option("mergeSchema", "true") \
+            .save('/mnt/cityoflondoncrime/gold/presentation_road_casualty_statistics_2023_data')
 
 # COMMAND ----------
 
-casualty_electric_cars_statistics_2023.display()
+casualty_electric_cars_statistics_2023.write.format("delta") \
+            .mode("overwrite") \
+            .option("mergeSchema", "true") \
+            .save('/mnt/cityoflondoncrime/gold/presentation_electric_cars_casualty_statistics_2023_data')
 
 # COMMAND ----------
 
-
+casualty_non_electric_cars_statistics_2023.write.format("delta") \
+            .mode("overwrite") \
+            .option("mergeSchema", "true") \
+            .save('/mnt/cityoflondoncrime/gold/presentation_non_electric_cars_casualty_statistics_2023_data')
