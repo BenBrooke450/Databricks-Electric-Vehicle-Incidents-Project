@@ -17,8 +17,6 @@ Data Analysis: Performs comprehensive analyses on the data to identify key trend
 
 Visualization: Presents the analysis results through intuitive and interactive visualizations, enabling stakeholders to make data-driven decisions.
 
-![Uploading image.png…]()
-
 
 Goals
 
