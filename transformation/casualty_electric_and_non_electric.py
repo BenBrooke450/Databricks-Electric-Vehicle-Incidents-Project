@@ -1,9 +1,9 @@
 # Databricks notebook source
-# MAGIC %run "../Includes/common_functions"
+# MAGIC %run "../includes/common_functions"
 
 # COMMAND ----------
 
-# MAGIC %run "../Includes/configuration/"
+# MAGIC %run "../includes/configuration/"
 
 # COMMAND ----------
 
@@ -32,8 +32,13 @@ casualty_statistics_2023_df = casualty_statistics_2023_df \
 
 # COMMAND ----------
 
-electric_cars_df = electric_cars_df.withColumn("make_and_model", 
-                            concat(upper(col("Make")),lit(" "),upper(col("Model"))))
+electric_cars_df = electric_cars_df \
+                    .filter((col("electric_vehicle_type") == "Battery Electric Vehicle (BEV)")).withColumn("make_and_model", concat(upper(col("Make")),lit(" "),upper(col("Model"))))
+
+# COMMAND ----------
+
+electric_cars_df = electric_cars_df \
+                    .filter(~col("make_and_model").isin("FORD TRANSIT","FORD FOCUS","MINI COUNTRYMAN","MINI HARDTOP"))
 
 # COMMAND ----------
 
@@ -42,8 +47,7 @@ casualty_statistics_2023_df \
 
 # COMMAND ----------
 
-brands_of_electric_cars = \
-            set(n[0] for n in electric_cars_df.select('make_and_model').collect())
+brands_of_electric_cars = set(x[0] for x in electric_cars_df.select("make_and_model").collect())
 
 # COMMAND ----------
 
@@ -54,6 +58,10 @@ casualty_statistics_2023_df = casualty_statistics_2023_df \
 
 casualty_electric_cars_statistics_2023 = casualty_statistics_2023_df \
                             .filter(col("electric_vehicle_type") == "Y")
+
+# COMMAND ----------
+
+casualty_electric_cars_statistics_2023.display()
 
 # COMMAND ----------
 
