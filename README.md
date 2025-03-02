@@ -6,20 +6,20 @@ This project leverages Databricks and Azure to build a data processing system fo
 
 ## Key Features
 
-Data Ingestion: Utilizes Databricks to extract data from various sources, including sales records, accident reports, and external datasets.
+**Data Ingestion:** Utilizes Databricks to extract data from various sources, including sales records, accident reports, and external datasets.
 
-Data Transformation: Cleanses and transforms the raw data to ensure consistency and accuracy, using Azure Databricks' powerful processing capabilities.
+**Data Transformation:** Cleanses and transforms the raw data to ensure consistency and accuracy, using Azure Databricks' powerful processing capabilities.
 
-Data Storage: Stores the transformed data in a scalable and secure Azure data lake for easy access and querying.
+**Data Storage:** Stores the transformed data in a scalable and secure Azure data lake for easy access and querying.
 
-Data Analysis: Performs comprehensive analyses on the data to identify key trends and patterns in EV sales and accidents, using Databricks' advanced analytics tools.
+**Data Analysis:** Performs comprehensive analyses on the data to identify key trends and patterns in EV sales and accidents, using Databricks' advanced analytics tools.
 
-Visualization: Presents the analysis results through intuitive and interactive visualizations, enabling stakeholders to make data-driven decisions.
+**Visualization:** Presents the analysis results through intuitive and interactive visualizations, enabling stakeholders to make data-driven decisions.
 
 ![image](https://github.com/user-attachments/assets/aa7aff77-ac93-4125-9d2c-52b47c5bfd2f)
 
 
-Goals
+## Goals
 
 *   To understand the current landscape of electric vehicle sales in the UK.
     
