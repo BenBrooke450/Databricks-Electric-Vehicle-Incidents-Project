@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/bec622f4-5650-4c67-b95b-7cfb635a582f)
 
 
 ## Project Description
@@ -16,6 +15,8 @@ Data Storage: Stores the transformed data in a scalable and secure Azure data la
 Data Analysis: Performs comprehensive analyses on the data to identify key trends and patterns in EV sales and accidents, using Databricks' advanced analytics tools.
 
 Visualization: Presents the analysis results through intuitive and interactive visualizations, enabling stakeholders to make data-driven decisions.
+
+![image](https://github.com/user-attachments/assets/aa7aff77-ac93-4125-9d2c-52b47c5bfd2f)
 
 
 Goals
