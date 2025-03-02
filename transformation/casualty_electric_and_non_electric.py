@@ -38,7 +38,7 @@ electric_cars_df = electric_cars_df \
 # COMMAND ----------
 
 electric_cars_df = electric_cars_df \
-                    .filter(~col("make_and_model").isin("FORD TRANSIT","FORD FOCUS","MINI COUNTRYMAN","MINI HARDTOP"))
+                    .filter(~col("make_and_model").isin("FORD TRANSIT","FORD FOCUS","MINI COUNTRYMAN","MINI HARDTOP","FIAT 500"))
 
 # COMMAND ----------
 
