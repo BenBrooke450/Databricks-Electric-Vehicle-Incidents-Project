@@ -4,7 +4,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="40" alt="numpy logo"  />
   <img width="12" />
-  <img src=![image](https://github.com/user-attachments/assets/84d1e24b-d83a-4057-9b1e-f7e59b332f20) height="40" alt="azure logo"  />
+  <img src=![image](https://github.com/user-attachments/assets/84d1e24b-d83a-4057-9b1e-f7e59b332f20) height="40" />
 </div>
 ## Project Description
 
