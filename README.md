@@ -1,4 +1,5 @@
-## Project Description
+## Project Description ![image](https://github.com/user-attachments/assets/02ad46a6-1772-460a-8d33-a74d860f3ef8)
+
 
 This project leverages Databricks and Azure to build a data processing system for analyzing electric car sales and accidents in the UK. The system employs a medallion architecture pipeline to efficiently process and analyze data, providing valuable insights into the trends and patterns of electric vehicle (EV) adoption and safety.
 
