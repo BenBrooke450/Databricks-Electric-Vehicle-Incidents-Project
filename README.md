@@ -1,7 +1,3 @@
-
-<h2 align="left">Hi 👋! Thank you for coming to view my Databricks project.</h2>
-
-
 ## Project Description
 
 This project leverages Databricks and Azure to build a data processing system for analyzing electric car sales and accidents in the UK. The system employs a medallion architecture pipeline to efficiently process and analyze data, providing valuable insights into the trends and patterns of electric vehicle (EV) adoption and safety.
