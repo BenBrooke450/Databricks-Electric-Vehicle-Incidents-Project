@@ -15,10 +15,11 @@ This project leverages Databricks and Azure to build a data processing system fo
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
   <img width="12" />
   <img src="https://github.com/user-attachments/assets/95b2d22d-e1db-40d1-87a3-f4c30e73ba52" height="40" alt="pyspark logo"  />
+  <img width="12" />
+  <img src="https://github.com/user-attachments/assets/9eccdcab-272b-43be-bbf4-decb4a30e711" height="40" alt="Delta Lake logo"  />
 </div>
 
 ###
-
 
 
 ## Key Features
