@@ -27,7 +27,7 @@ This project leverages Databricks and Azure to build a data processing system fo
 
 **Data Transformation:** Cleanses and transforms the raw data to ensure consistency and accuracy, using Azure Databricks' powerful processing capabilities.
 
-**Data Storage:** Stores the transformed data in a scalable and secure Azure data lake for easy access and querying.
+**Data Storage:** Utilizes Delta Lake to write and read to store transformed data in a scalable and secure Azure data lake, ensuring easy access and efficient querying.
 
 **Data Analysis:** Performs comprehensive analyses on the data to identify key trends and patterns in EV sales and accidents, using Databricks' advanced analytics tools.
 
