@@ -1,5 +1,5 @@
 
-# Electric Vehicle sales and inidents UK 2023 Analysis
+# Electric Vehicle Sales and Inidents UK 2023 Analysis
 
 ## Project Description
 
