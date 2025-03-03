@@ -56,6 +56,11 @@ This project leverages Databricks and Azure to build a data processing system fo
 
 
 
+## Results
+
+
+![image](https://github.com/user-attachments/assets/632dbb96-205a-4641-906b-ebd1eec10bd0)
+
 
 
 
