@@ -3,10 +3,6 @@
 
 # COMMAND ----------
 
-
-
-# COMMAND ----------
-
 from pyspark.sql.functions import col, lit, contains, when, count, row_number, concat, upper, rank, avg, round, sum, max
 from pyspark.sql.window import Window
 from pyspark.sql.types import IntegerType
@@ -47,8 +43,19 @@ df_electric_cars_sales = df_electric_cars_sales \
 
 # COMMAND ----------
 
-df_electric_cars_sales.display()
+df_electric_cars_sales.withColumn("top_cars_sold",
+                                  row_number().over(Window.partitionBy().orderBy(col("cars_sold").desc()))) \
+                                  .filter(col("top_cars_sold")<16).display()
+
+
+# COMMAND ----------
+
+df_electric_cars_casualty = df_electric_cars_casualty.filter(col("age_of_driver") != -1)
 
 # COMMAND ----------
 
 df_electric_cars_casualty.display()
+
+# COMMAND ----------
+
+
